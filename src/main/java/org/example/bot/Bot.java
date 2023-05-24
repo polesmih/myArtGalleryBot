@@ -3,7 +3,6 @@ package org.example.bot;
 import lombok.SneakyThrows;
 import org.example.bot.settings.ConfigSettings;
 import org.example.handler.MessageHandler;
-import org.example.handler.PhotoHandler;
 import org.example.handler.hermitageHandler.HermitageSelectionHandler;
 import org.example.handler.hermitageHandler.HermitageTypes;
 import org.example.handler.rusMusHandler.RusMusSelectionHandler;
@@ -90,13 +89,10 @@ public class Bot extends TelegramLongPollingBot {
         }
 
             else if (update.hasCallbackQuery()) {
-                String call_data = update.getCallbackQuery().getData();
-                long chat_id = update.getCallbackQuery().getMessage().getChatId();
 
-                if (call_data.equals("1")) {
-                        execute(PhotoHandler.sendPhoto(chat_id, "D:\\MyProjects\\myArtGalleryBot\\src\\main\\resources\\files\\tretGal\\Айвазовский Иван Радуга.jpg", "Айвазовский, Радуга"));
+                tretGalHandler.onUpdateReceived(update);
 
-                    }
+
                 }
             }
 }

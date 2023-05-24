@@ -4,7 +4,7 @@ import static org.example.bot.settings.EmojiConst.*;
 
 public class MessagesConst {
 
-    public final static String HELLO = "! " + HI + "\nС помощью этого бота ты можешь \"побродить\" " +
+    public final static String HELLO = "! " + HI + "\nС помощью этого бота ты можешь погулять " +
             "по Русскому музею, Эрмитажу, Третьяковской галерее " +
             "и полюбоваться картинами некоторых художников.\nПриятного путешествия!";
 
