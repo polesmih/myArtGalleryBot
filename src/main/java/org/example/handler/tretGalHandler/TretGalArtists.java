@@ -12,7 +12,7 @@ public enum TretGalArtists {
     BERINGOV,
     BOGDANOV,
     BORISOV,
-    BORISIV_MUSATOV,
+    BORISOV_MUSATOV,
     BOROVIKOVSKY,
     BOCHAROV,
     BRAZ,
@@ -120,7 +120,6 @@ public enum TretGalArtists {
     CHIPICIN,
     ERASSI,
     YAROSHENKO
-
 
 
 }

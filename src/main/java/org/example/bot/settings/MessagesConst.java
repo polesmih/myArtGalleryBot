@@ -10,7 +10,7 @@ public class MessagesConst {
 
     public final static String DOG_SHELTER = "Хочешь меня отблагодарить? -\n" +
             "помоги Фонду \"Помощь бездомным собакам\" " + DOG +
-            "\"https://donate.priut.ru\"";
+            "\nhttps://donate.priut.ru";
 
     public final static String CHOOSE = "Чтобы выбрать музей, воспользуйся клавиатурой " + DOWN;
 

@@ -64,7 +64,7 @@ public class TretGalInlineKeyboardAb {
 
         List<InlineKeyboardButton> rowInline5 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton9 = new InlineKeyboardButton();
-        inlineKeyboardButton9.setText("Богданов");
+        inlineKeyboardButton9.setText("Богданов-Бельский");
         inlineKeyboardButton9.setCallbackData(BOGDANOV.toString());
         InlineKeyboardButton inlineKeyboardButton10 = new InlineKeyboardButton();
         inlineKeyboardButton10.setText("Борисов");
@@ -75,7 +75,7 @@ public class TretGalInlineKeyboardAb {
         List<InlineKeyboardButton> rowInline6 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton11 = new InlineKeyboardButton();
         inlineKeyboardButton11.setText("Борисов-Мусатов");
-        inlineKeyboardButton11.setCallbackData(BORISIV_MUSATOV.toString());
+        inlineKeyboardButton11.setCallbackData(BORISOV_MUSATOV.toString());
         InlineKeyboardButton inlineKeyboardButton12 = new InlineKeyboardButton();
         inlineKeyboardButton12.setText("Боровиковский");
         inlineKeyboardButton12.setCallbackData(BOROVIKOVSKY.toString());

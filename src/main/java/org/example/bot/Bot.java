@@ -3,10 +3,12 @@ package org.example.bot;
 import lombok.SneakyThrows;
 import org.example.bot.settings.ConfigSettings;
 import org.example.handler.MessageHandler;
+import org.example.handler.PhotoHandler;
 import org.example.handler.hermitageHandler.HermitageSelectionHandler;
 import org.example.handler.hermitageHandler.HermitageTypes;
 import org.example.handler.rusMusHandler.RusMusSelectionHandler;
 import org.example.handler.rusMusHandler.RusMusTypes;
+import org.example.handler.tretGalHandler.TretGalArtists;
 import org.example.handler.tretGalHandler.TretGalSelectionHandler;
 import org.example.handler.tretGalHandler.TretGalAlphabetTypes;
 import org.example.handler.serviceCommandHandler.CommandSelectionHandler;
@@ -19,8 +21,11 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.commands.scope.BotCommandScopeDefault;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+import java.util.Arrays;
+
 import static org.example.bot.settings.BotCommands.LIST_OF_COMMAND;
 import static org.example.bot.settings.MessagesConst.*;
+import static org.example.handler.tretGalHandler.TretGalArtists.AIVAZOVSKY;
 
 public class Bot extends TelegramLongPollingBot {
 
@@ -71,7 +76,7 @@ public class Bot extends TelegramLongPollingBot {
             } else if (musTypes.types().contains(message_text)) {
                 museumHandler.onUpdateReceived(update);
 
-            //TODO
+            //Done
             } else if (tretGalAlphabetTypes.types().contains(message_text)) {
                 tretGalHandler.onUpdateReceived(update);
 
@@ -84,16 +89,19 @@ public class Bot extends TelegramLongPollingBot {
 
 
             } else {
-                    execute(MessageHandler.sendMessage(chat_id, UNKNOWN));
+                execute(MessageHandler.sendMessage(chat_id, UNKNOWN));
             }
-        }
 
-            else if (update.hasCallbackQuery()) {
 
+        } else if (update.hasCallbackQuery()) {
+            String call_data = update.getCallbackQuery().getData();
+
+            if (Arrays.toString(TretGalArtists.values()).contains(call_data)) {
                 tretGalHandler.onUpdateReceived(update);
-
-
-                }
             }
+
+
+        }
+    }
 }
 
