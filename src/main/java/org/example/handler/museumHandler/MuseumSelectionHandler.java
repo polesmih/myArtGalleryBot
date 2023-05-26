@@ -1,14 +1,13 @@
-package org.example.handler.typesOfMuseumHandler;
+package org.example.handler.museumHandler;
 
 import lombok.SneakyThrows;
 import org.example.bot.settings.ConfigSettings;
-import org.example.handler.serviceCommandHandler.replyKeyboards.AlphabetKeyboard;
+import org.example.bot.settings.replyKeyboards.AlphabetKeyboard;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import static org.example.bot.settings.MessagesConst.ABC;
-import static org.example.handler.typesOfMuseumHandler.MuseumTypesConst.*;
 
 public class MuseumSelectionHandler extends TelegramLongPollingBot {
 
