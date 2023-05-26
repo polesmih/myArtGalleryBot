@@ -2,12 +2,9 @@ package org.example.handler.rusMusHandler;
 
 import lombok.SneakyThrows;
 import org.example.bot.settings.ConfigSettings;
-import org.example.handler.PhotoHandler;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
-
-import static org.example.handler.rusMusHandler.RusMusPathsConst.*;
 
 public class RusMusSelectionHandler extends TelegramLongPollingBot {
 

@@ -2,19 +2,18 @@ package org.example.bot;
 
 import lombok.SneakyThrows;
 import org.example.bot.settings.ConfigSettings;
-import org.example.handler.MessageHandler;
-import org.example.handler.PhotoHandler;
+import org.example.bot.settings.Sender;
 import org.example.handler.hermitageHandler.HermitageSelectionHandler;
 import org.example.handler.hermitageHandler.HermitageTypes;
 import org.example.handler.rusMusHandler.RusMusSelectionHandler;
 import org.example.handler.rusMusHandler.RusMusTypes;
-import org.example.handler.tretGalHandler.TretGalArtists;
+import org.example.bot.settings.enums.TretGalArtists;
 import org.example.handler.tretGalHandler.TretGalSelectionHandler;
 import org.example.handler.tretGalHandler.TretGalAlphabetTypes;
-import org.example.handler.serviceCommandHandler.CommandSelectionHandler;
-import org.example.handler.serviceCommandHandler.CommandServiceType;
-import org.example.handler.typesOfMuseumHandler.MuseumSelectionHandler;
-import org.example.handler.typesOfMuseumHandler.MuseumTypes;
+import org.example.handler.commandHandler.CommandSelectionHandler;
+import org.example.handler.commandHandler.CommandTypes;
+import org.example.handler.museumHandler.MuseumSelectionHandler;
+import org.example.handler.museumHandler.MuseumTypes;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -25,7 +24,6 @@ import java.util.Arrays;
 
 import static org.example.bot.settings.BotCommands.LIST_OF_COMMAND;
 import static org.example.bot.settings.MessagesConst.*;
-import static org.example.handler.tretGalHandler.TretGalArtists.AIVAZOVSKY;
 
 public class Bot extends TelegramLongPollingBot {
 
@@ -37,7 +35,7 @@ public class Bot extends TelegramLongPollingBot {
     TretGalAlphabetTypes tretGalAlphabetTypes = new TretGalAlphabetTypes();
     HermitageTypes hgTypes = new HermitageTypes();
     RusMusTypes rusMusTypes = new RusMusTypes();
-    CommandServiceType commandType = new CommandServiceType();
+    CommandTypes commandType = new CommandTypes();
     CommandSelectionHandler commandHandler = new CommandSelectionHandler();
     private final static ConfigSettings settings = ConfigSettings.getInstance();
     String message_text;
@@ -68,6 +66,7 @@ public class Bot extends TelegramLongPollingBot {
             message_text = update.getMessage().getText();
             chat_id = update.getMessage().getChatId();
 
+
             //Done
             if (commandType.types().contains(message_text)) {
                 commandHandler.onUpdateReceived(update);
@@ -89,7 +88,7 @@ public class Bot extends TelegramLongPollingBot {
 
 
             } else {
-                execute(MessageHandler.sendMessage(chat_id, UNKNOWN));
+                execute(Sender.sendMessage(chat_id, UNKNOWN));
             }
 
 

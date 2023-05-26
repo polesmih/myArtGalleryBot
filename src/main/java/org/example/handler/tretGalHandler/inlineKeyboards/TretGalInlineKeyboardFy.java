@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.example.bot.settings.MessagesConst.ART;
-import static org.example.handler.tretGalHandler.TretGalArtists.*;
+import static org.example.bot.settings.enums.TretGalArtists.*;
 
 public class TretGalInlineKeyboardFy {
 
@@ -24,77 +24,77 @@ public class TretGalInlineKeyboardFy {
 
         List<InlineKeyboardButton> rowInline1 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
-        inlineKeyboardButton1.setText("Фальк");
+        inlineKeyboardButton1.setText(FALK.getArtName());
         inlineKeyboardButton1.setCallbackData(FALK.toString());
         InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
-        inlineKeyboardButton2.setText("Федотов");
+        inlineKeyboardButton2.setText(FEDOTOV.getArtName());
         inlineKeyboardButton2.setCallbackData(FEDOTOV.toString());
         rowInline1.add(inlineKeyboardButton1);
         rowInline1.add(inlineKeyboardButton2);
 
         List<InlineKeyboardButton> rowInline2 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton3 = new InlineKeyboardButton();
-        inlineKeyboardButton3.setText("Филонов");
+        inlineKeyboardButton3.setText(FILONOV.getArtName());
         inlineKeyboardButton3.setCallbackData(FILONOV.toString());
         InlineKeyboardButton inlineKeyboardButton4 = new InlineKeyboardButton();
-        inlineKeyboardButton4.setText("Хохряков");
+        inlineKeyboardButton4.setText(HOHRAKOV.getArtName());
         inlineKeyboardButton4.setCallbackData(HOHRAKOV.toString());
         rowInline2.add(inlineKeyboardButton3);
         rowInline2.add(inlineKeyboardButton4);
 
         List<InlineKeyboardButton> rowInline3 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton5 = new InlineKeyboardButton();
-        inlineKeyboardButton5.setText("Чашник");
+        inlineKeyboardButton5.setText(CHASHNIC.getArtName());
         inlineKeyboardButton5.setCallbackData(CHASHNIC.toString());
         InlineKeyboardButton inlineKeyboardButton6 = new InlineKeyboardButton();
-        inlineKeyboardButton6.setText("Чекрыгин");
+        inlineKeyboardButton6.setText(CHEKRYGIN.getArtName());
         inlineKeyboardButton6.setCallbackData(CHEKRYGIN.toString());
         rowInline3.add(inlineKeyboardButton5);
         rowInline3.add(inlineKeyboardButton6);
 
         List<InlineKeyboardButton> rowInline4 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton7 = new InlineKeyboardButton();
-        inlineKeyboardButton7.setText("Черемушкин");
+        inlineKeyboardButton7.setText(CHEREMUSHKIN.getArtName());
         inlineKeyboardButton7.setCallbackData(CHEREMUSHKIN.toString());
         InlineKeyboardButton inlineKeyboardButton8 = new InlineKeyboardButton();
-        inlineKeyboardButton8.setText("Шанкс");
+        inlineKeyboardButton8.setText(SHANKS.getArtName());
         inlineKeyboardButton8.setCallbackData(SHANKS.toString());
         rowInline4.add(inlineKeyboardButton7);
         rowInline4.add(inlineKeyboardButton8);
 
         List<InlineKeyboardButton> rowInline5 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton9 = new InlineKeyboardButton();
-        inlineKeyboardButton9.setText("Шаховский");
+        inlineKeyboardButton9.setText(SHACHOVSKY.getArtName());
         inlineKeyboardButton9.setCallbackData(SHACHOVSKY.toString());
         InlineKeyboardButton inlineKeyboardButton10 = new InlineKeyboardButton();
-        inlineKeyboardButton10.setText("Шевченко");
+        inlineKeyboardButton10.setText(SHEVCHENKO.getArtName());
         inlineKeyboardButton10.setCallbackData(SHEVCHENKO.toString());
         rowInline5.add(inlineKeyboardButton9);
         rowInline5.add(inlineKeyboardButton10);
 
         List<InlineKeyboardButton> rowInline6 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton11 = new InlineKeyboardButton();
-        inlineKeyboardButton11.setText("Шишкин");
+        inlineKeyboardButton11.setText(SHISHKIN.getArtName());
         inlineKeyboardButton11.setCallbackData(SHISHKIN.toString());
         InlineKeyboardButton inlineKeyboardButton12 = new InlineKeyboardButton();
-        inlineKeyboardButton12.setText("Щедрин");
+        inlineKeyboardButton12.setText(CHEDRIN.getArtName());
         inlineKeyboardButton12.setCallbackData(CHEDRIN.toString());
         rowInline6.add(inlineKeyboardButton11);
         rowInline6.add(inlineKeyboardButton12);
 
         List<InlineKeyboardButton> rowInline7 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton13 = new InlineKeyboardButton();
-        inlineKeyboardButton13.setText("Щипицын");
+        inlineKeyboardButton13.setText(CHIPICIN.getArtName());
         inlineKeyboardButton13.setCallbackData(CHIPICIN.toString());
         InlineKeyboardButton inlineKeyboardButton14 = new InlineKeyboardButton();
-        inlineKeyboardButton14.setText("Эрасси");
+        inlineKeyboardButton14.setText(ERASSI.getArtName());
         inlineKeyboardButton14.setCallbackData(ERASSI.toString());
         rowInline7.add(inlineKeyboardButton13);
         rowInline7.add(inlineKeyboardButton14);
 
         List<InlineKeyboardButton> rowInline8 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton15 = new InlineKeyboardButton();
-        inlineKeyboardButton15.setText("Ярошенко");
+        inlineKeyboardButton15.setText(YAROSHENKO.getArtName());
         inlineKeyboardButton15.setCallbackData(YAROSHENKO.toString());
         rowInline8.add(inlineKeyboardButton15);
 
