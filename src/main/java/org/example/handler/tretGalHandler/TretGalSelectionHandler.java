@@ -39,11 +39,11 @@ public class TretGalSelectionHandler extends TelegramLongPollingBot {
             } else if (message_text.equals(V_G.getAbcType())) {
                 execute(TretGalInlineKeyboardVj.tretGalInlineKeyboardVj(chat_id));
             } else if (message_text.equals(Z_K.getAbcType())) {
-                    execute(TretGalInlineKeyboardZk.tretGalInlineKeyboardZk(chat_id));
+                execute(TretGalInlineKeyboardZk.tretGalInlineKeyboardZk(chat_id));
             } else if (message_text.equals(L_N.getAbcType())) {
-                    execute(TretGalInlineKeyboardLn.tretGalInlineKeyboardLn(chat_id));
+                execute(TretGalInlineKeyboardLn.tretGalInlineKeyboardLn(chat_id));
             } else if (message_text.equals(O_R.getAbcType())) {
-                    execute(TretGalInlineKeyboardOr.tretGalInlineKeyboardOr(chat_id));
+                execute(TretGalInlineKeyboardOr.tretGalInlineKeyboardOr(chat_id));
             } else if (message_text.equals(S_U.getAbcType())) {
                 execute(TretGalInlineKeyboardSu.tretGalInlineKeyboardSu(chat_id));
             } else if (message_text.equals(F_Y.getAbcType())) {
@@ -239,7 +239,61 @@ public class TretGalSelectionHandler extends TelegramLongPollingBot {
                 execute(Sender.sendPhoto(chat_id, ROOT + "Истомин Константин Зима (Надя).jpg", "Истомин, Зима (Надя)"));
                 execute(Sender.sendPhoto(chat_id, ROOT + "Истомин Константин Зимний пейзаж. Московский переулок.png", "Истомин, Зимний пейзаж. Московский переулок"));
 
+            } else if (call_data.equals(KANDINSKY.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Кандинский Василий Дамы в кринолинах.jpg", "Кандинский, Дамы в кринолинах"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Кандинский Василий Композиция VII.jpg", "Кандинский, Композиция VII"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Кандинский Василий Москва. Красная площадь.jpg", "Кандинский, Москва. Красная площадь"));
+
+            } else if (call_data.equals(KELIN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Келин Петр Ажурницы.png", "Келин. Ажурницы"));
+
+            } else if (call_data.equals(KIPRENSKY.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Кипренский Орест Портрет поэта А.С. Пушкина.jpg", "Кипренский, Портрет поэта А.С. Пушкина"));
+
+            } else if (call_data.equals(KISELEV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Киселев Александр Весенний снег.jpg", "Киселев, Весенний снег"));
+
+            } else if (call_data.equals(KOMAROV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Комаров Василий Портрет Вали Ходасевич.jpg", "Комаров, Портрет Вали Ходасевич"));
+
+            } else if (call_data.equals(KONENKOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Коненков Сергей Ниночка.jpg", "Коненков, Ниночка"));
+
+            } else if (call_data.equals(KORJEV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Коржев Гелий Адам Андреевич и Ева Петровна.jpg", "Коржев, Адам Андреевич и Ева Петровна"));
+
+            } else if (call_data.equals(KORIN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Корин Павел Отец и сын (Сергей Михайлович Чураков и Степан Сергеевич Чураков).png", "Корин, Отец и сын (Сергей Михайлович Чураков и Степан Сергеевич Чураков)"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Корин Павел Протодиакон Михаил Кузьмич Холмогоров.jpg", "Корин, Протодиакон Михаил Кузьмич Холмогоров"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Корин Павел Схимница.jpg", "Корин, Схимница"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Корин Павел Эскиз мозаики Марш в будущее для дворца Советов. Фрагмент.png", "Корин, Эскиз мозаики Марш в будущее для дворца Советов. Фрагмент"));
+
+            } else if (call_data.equals(KOROVIN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Коровин Константин Гвоздики и фиалки.png", "Коровин, Гвоздики и фиалки"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Коровин Константин Париж ночью. Итальянский бульвар.jpg", "Коровин, Париж ночью. Итальянский бульвар"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Коровин Константин У открытого окна. Портрет дочерей Ф.И. Шаляпина.jpg", "Коровин, У открытого окна. Портрет дочерей Ф.И. Шаляпина"));
+
+            } else if (call_data.equals(KRAVCHENKO.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Кравченко Алексей Нь-Йорк. Бруклинский мост.png", "Кравченко, Нь-Йорк. Бруклинский мост"));
+
+            } else if (call_data.equals(KRAMSKOY.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Крамской Иван Лунная ночь.png", "Крамской, Лунная ночь"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Крамской Иван Неизвестная.jpg", "Крамской, Неизвестная"));
+
+            } else if (call_data.equals(KUINDJI.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Куинджи Архип Березовая роща.jpg", "Куинджи, Архип Березовая роща"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Куинджи Архип Лес.jpg", "Куинджи, Лес"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Куинджи Архип После дождя.jpg", "Куинджи, После дождя"));
+
+            } else if (call_data.equals(KUPREYANOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Купреянов Николай Игрушки.png", "Купреянов, Игрушки"));
+
+            } else if (call_data.equals(KUSTODIEV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Кустодиев Борис Большевик.jpg", "Кустодиев Борис Большевик"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Кустодиев Борис Московский трактир.jpg", "Кустодиев, Московский трактир"));
+
             }
+
         }
     }
 
