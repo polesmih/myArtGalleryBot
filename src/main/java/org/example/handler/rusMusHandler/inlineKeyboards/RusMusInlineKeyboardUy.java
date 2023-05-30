@@ -1,4 +1,4 @@
-package org.example.handler.tretGalHandler.inlineKeyboards;
+package org.example.handler.rusMusHandler.inlineKeyboards;
 
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.example.bot.settings.MessagesConst.ART;
-import static org.example.bot.settings.enums.TretGalArtists.*;
+import static org.example.bot.settings.enums.RusMusArtists.*;
 
-public class TretGalInlineKeyboardZk {
+public class RusMusInlineKeyboardUy {
 
-    public static SendMessage tretGalInlineKeyboardZk(long chat_id) {
+    public static SendMessage rusMusInlineKeyboardUy(long chat_id) {
 
         SendMessage message = new SendMessage();
         message.setChatId(chat_id);
@@ -24,99 +24,93 @@ public class TretGalInlineKeyboardZk {
 
         List<InlineKeyboardButton> rowInline1 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton1 = new InlineKeyboardButton();
-        inlineKeyboardButton1.setText(ZAICEV.getArtName());
-        inlineKeyboardButton1.setCallbackData(ZAICEV.toString());
+        inlineKeyboardButton1.setText(R_UDALCOVA.getArtName());
+        inlineKeyboardButton1.setCallbackData(R_UDALCOVA.toString());
         InlineKeyboardButton inlineKeyboardButton2 = new InlineKeyboardButton();
-        inlineKeyboardButton2.setText(ZACHAROV.getArtName());
-        inlineKeyboardButton2.setCallbackData(ZACHAROV.toString());
+        inlineKeyboardButton2.setText(R_FEDOTOV.getArtName());
+        inlineKeyboardButton2.setCallbackData(R_FEDOTOV.toString());
         rowInline1.add(inlineKeyboardButton1);
         rowInline1.add(inlineKeyboardButton2);
 
         List<InlineKeyboardButton> rowInline2 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton3 = new InlineKeyboardButton();
-        inlineKeyboardButton3.setText(ZVERKOV.getArtName());
-        inlineKeyboardButton3.setCallbackData(ZVERKOV.toString());
+        inlineKeyboardButton3.setText(R_FEKLISTOV.getArtName());
+        inlineKeyboardButton3.setCallbackData(R_FEKLISTOV.toString());
         InlineKeyboardButton inlineKeyboardButton4 = new InlineKeyboardButton();
-        inlineKeyboardButton4.setText(IVANOV_AI.getArtName());
-        inlineKeyboardButton4.setCallbackData(IVANOV_AI.toString());
+        inlineKeyboardButton4.setText(R_FILONOV.getArtName());
+        inlineKeyboardButton4.setCallbackData(R_FILONOV.toString());
         rowInline2.add(inlineKeyboardButton3);
         rowInline2.add(inlineKeyboardButton4);
 
         List<InlineKeyboardButton> rowInline3 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton5 = new InlineKeyboardButton();
-        inlineKeyboardButton5.setText(ISTOMIN.getArtName());
-        inlineKeyboardButton5.setCallbackData(ISTOMIN.toString());
+        inlineKeyboardButton5.setText(R_FLAVICKY.getArtName());
+        inlineKeyboardButton5.setCallbackData(R_FLAVICKY.toString());
         InlineKeyboardButton inlineKeyboardButton6 = new InlineKeyboardButton();
-        inlineKeyboardButton6.setText(KANDINSKY.getArtName());
-        inlineKeyboardButton6.setCallbackData(KANDINSKY.toString());
+        inlineKeyboardButton6.setText(R_FRENC.getArtName());
+        inlineKeyboardButton6.setCallbackData(R_FRENC.toString());
         rowInline3.add(inlineKeyboardButton5);
         rowInline3.add(inlineKeyboardButton6);
 
         List<InlineKeyboardButton> rowInline4 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton7 = new InlineKeyboardButton();
-        inlineKeyboardButton7.setText(KELIN.getArtName());
-        inlineKeyboardButton7.setCallbackData(KELIN.toString());
+        inlineKeyboardButton7.setText(R_HARLAMOV.getArtName());
+        inlineKeyboardButton7.setCallbackData(R_HARLAMOV.toString());
         InlineKeyboardButton inlineKeyboardButton8 = new InlineKeyboardButton();
-        inlineKeyboardButton8.setText(KIPRENSKY.getArtName());
-        inlineKeyboardButton8.setCallbackData(KIPRENSKY.toString());
+        inlineKeyboardButton8.setText(R_CHERNECOV.getArtName());
+        inlineKeyboardButton8.setCallbackData(R_CHERNECOV.toString());
         rowInline4.add(inlineKeyboardButton7);
         rowInline4.add(inlineKeyboardButton8);
 
         List<InlineKeyboardButton> rowInline5 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton9 = new InlineKeyboardButton();
-        inlineKeyboardButton9.setText(KISELEV.getArtName());
-        inlineKeyboardButton9.setCallbackData(KISELEV.toString());
+        inlineKeyboardButton9.setText(R_CHERNYSHEV.getArtName());
+        inlineKeyboardButton9.setCallbackData(R_CHERNYSHEV.toString());
         InlineKeyboardButton inlineKeyboardButton10 = new InlineKeyboardButton();
-        inlineKeyboardButton10.setText(KOMAROV.getArtName());
-        inlineKeyboardButton10.setCallbackData(KOMAROV.toString());
+        inlineKeyboardButton10.setText(R_SHAGAL.getArtName());
+        inlineKeyboardButton10.setCallbackData(R_SHAGAL.toString());
         rowInline5.add(inlineKeyboardButton9);
         rowInline5.add(inlineKeyboardButton10);
 
         List<InlineKeyboardButton> rowInline6 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton11 = new InlineKeyboardButton();
-        inlineKeyboardButton11.setText(KONENKOV.getArtName());
-        inlineKeyboardButton11.setCallbackData(KONENKOV.toString());
+        inlineKeyboardButton11.setText(R_SHEVCHENKO.getArtName());
+        inlineKeyboardButton11.setCallbackData(R_SHEVCHENKO.toString());
         InlineKeyboardButton inlineKeyboardButton12 = new InlineKeyboardButton();
-        inlineKeyboardButton12.setText(KORJEV.getArtName());
-        inlineKeyboardButton12.setCallbackData(KORJEV.toString());
+        inlineKeyboardButton12.setText(R_SHISHKIN.getArtName());
+        inlineKeyboardButton12.setCallbackData(R_SHISHKIN.toString());
         rowInline6.add(inlineKeyboardButton11);
         rowInline6.add(inlineKeyboardButton12);
 
         List<InlineKeyboardButton> rowInline7 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton13 = new InlineKeyboardButton();
-        inlineKeyboardButton13.setText(KORIN.getArtName());
-        inlineKeyboardButton13.setCallbackData(KORIN.toString());
+        inlineKeyboardButton13.setText(R_SHTERNBERG.getArtName());
+        inlineKeyboardButton13.setCallbackData(R_SHTERNBERG.toString());
         InlineKeyboardButton inlineKeyboardButton14 = new InlineKeyboardButton();
-        inlineKeyboardButton14.setText(KOROVIN.getArtName());
-        inlineKeyboardButton14.setCallbackData(KOROVIN.toString());
+        inlineKeyboardButton14.setText(R_EKSTER.getArtName());
+        inlineKeyboardButton14.setCallbackData(R_EKSTER.toString());
         rowInline7.add(inlineKeyboardButton13);
         rowInline7.add(inlineKeyboardButton14);
 
         List<InlineKeyboardButton> rowInline8 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton15 = new InlineKeyboardButton();
-        inlineKeyboardButton15.setText(KRAVCHENKO.getArtName());
-        inlineKeyboardButton15.setCallbackData(KRAVCHENKO.toString());
+        inlineKeyboardButton15.setText(R_UON.getArtName());
+        inlineKeyboardButton15.setCallbackData(R_UON.toString());
         InlineKeyboardButton inlineKeyboardButton16 = new InlineKeyboardButton();
-        inlineKeyboardButton16.setText(KRAMSKOY.getArtName());
-        inlineKeyboardButton16.setCallbackData(KRAMSKOY.toString());
+        inlineKeyboardButton16.setText(R_YAKOBI.getArtName());
+        inlineKeyboardButton16.setCallbackData(R_YAKOBI.toString());
         rowInline8.add(inlineKeyboardButton15);
         rowInline8.add(inlineKeyboardButton16);
 
         List<InlineKeyboardButton> rowInline9 = new ArrayList<>();
         InlineKeyboardButton inlineKeyboardButton17 = new InlineKeyboardButton();
-        inlineKeyboardButton17.setText(KUINDJI.getArtName());
-        inlineKeyboardButton17.setCallbackData(KUINDJI.toString());
+        inlineKeyboardButton17.setText(R_YAKOVLEV.getArtName());
+        inlineKeyboardButton17.setCallbackData(R_YAKOVLEV.toString());
         InlineKeyboardButton inlineKeyboardButton18 = new InlineKeyboardButton();
-        inlineKeyboardButton18.setText(KUPREYANOV.getArtName());
-        inlineKeyboardButton18.setCallbackData(KUPREYANOV.toString());
+        inlineKeyboardButton18.setText(R_YAROSHENKO.getArtName());
+        inlineKeyboardButton18.setCallbackData(R_YAROSHENKO.toString());
         rowInline9.add(inlineKeyboardButton17);
         rowInline9.add(inlineKeyboardButton18);
-
-        List<InlineKeyboardButton> rowInline10 = new ArrayList<>();
-        InlineKeyboardButton inlineKeyboardButton19 = new InlineKeyboardButton();
-        inlineKeyboardButton19.setText(KUSTODIEV.getArtName());
-        inlineKeyboardButton19.setCallbackData(KUSTODIEV.toString());
-        rowInline10.add(inlineKeyboardButton19);
 
         rowsInline.add(rowInline1);
         rowsInline.add(rowInline2);
@@ -127,7 +121,6 @@ public class TretGalInlineKeyboardZk {
         rowsInline.add(rowInline7);
         rowsInline.add(rowInline8);
         rowsInline.add(rowInline9);
-        rowsInline.add(rowInline10);
 
         markupInline.setKeyboard(rowsInline);
         message.setReplyMarkup(markupInline);
@@ -135,5 +128,6 @@ public class TretGalInlineKeyboardZk {
         return message;
 
     }
+
 
 }

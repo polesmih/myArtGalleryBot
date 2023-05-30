@@ -5,7 +5,7 @@ import org.example.bot.settings.ConfigSettings;
 import org.example.bot.settings.Sender;
 import org.example.db.UserConnection;
 import org.example.db.WriteUser;
-import org.example.bot.settings.replyKeyboards.MuseumKeyboard;
+import org.example.handler.museumHandler.MuseumKeyboard;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;

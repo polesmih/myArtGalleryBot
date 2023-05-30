@@ -7,7 +7,6 @@ import org.example.handler.tretGalHandler.inlineKeyboards.*;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
-import static org.example.bot.settings.enums.AlphabetType.*;
 import static org.example.bot.settings.enums.TretGalArtists.*;
 
 public class TretGalSelectionHandler extends TelegramLongPollingBot {
@@ -34,19 +33,19 @@ public class TretGalSelectionHandler extends TelegramLongPollingBot {
             message_text = update.getMessage().getText();
             long chat_id = update.getMessage().getChatId();
 
-            if (message_text.equals(A_B.getAbcType())) {
+            if (message_text.equals("А - Б")) {
                 execute(TretGalInlineKeyboardAb.tretGalInlineKeyboardAb(chat_id));
-            } else if (message_text.equals(V_G.getAbcType())) {
+            } else if (message_text.equals("В - Ж")) {
                 execute(TretGalInlineKeyboardVj.tretGalInlineKeyboardVj(chat_id));
-            } else if (message_text.equals(Z_K.getAbcType())) {
+            } else if (message_text.equals("З - К")) {
                 execute(TretGalInlineKeyboardZk.tretGalInlineKeyboardZk(chat_id));
-            } else if (message_text.equals(L_N.getAbcType())) {
+            } else if (message_text.equals("Л - Н")) {
                 execute(TretGalInlineKeyboardLn.tretGalInlineKeyboardLn(chat_id));
-            } else if (message_text.equals(O_R.getAbcType())) {
+            } else if (message_text.equals("О - Р")) {
                 execute(TretGalInlineKeyboardOr.tretGalInlineKeyboardOr(chat_id));
-            } else if (message_text.equals(S_U.getAbcType())) {
+            } else if (message_text.equals("С - У")) {
                 execute(TretGalInlineKeyboardSu.tretGalInlineKeyboardSu(chat_id));
-            } else if (message_text.equals(F_Y.getAbcType())) {
+            } else if (message_text.equals("Ф - Я")) {
                 execute(TretGalInlineKeyboardFy.tretGalInlineKeyboardFy(chat_id));
 
             }
@@ -227,10 +226,10 @@ public class TretGalSelectionHandler extends TelegramLongPollingBot {
                 execute(Sender.sendPhoto(chat_id, ROOT + "Зверьков Ефрем Новая лодка.png", "Зверьков, Новая лодка"));
                 execute(Sender.sendPhoto(chat_id, ROOT + "Зверьков Ефрем Северная весна.jpg", "Зверьков, Северная весна"));
 
-            } else if (call_data.equals(IVANOV.toString())) {
-                execute(Sender.sendPhoto(chat_id, ROOT + "Иванов Александр Автопортрет.jpg", "Иванов, Автопортрет"));
-                execute(Sender.sendPhoto(chat_id, ROOT + "Иванов Александр Аполлон, Гиацинт и Кипарис, занимающиеся музыкой и пением.jpg", "Иванов, Аполлон, Гиацинт и Кипарис, занимающиеся музыкой и пением"));
-                execute(Sender.sendPhoto(chat_id, ROOT + "Иванов Александр Явление Христа народа (Явление Мессии).jpg", "Иванов Александр Явление Христа народа (Явление Мессии).jpg"));
+            } else if (call_data.equals(IVANOV_AI.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Иванов Александр Автопортрет.jpg", "Иванов А.И., Автопортрет"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Иванов Александр Аполлон, Гиацинт и Кипарис, занимающиеся музыкой и пением.jpg", "Иванов А.И., Аполлон, Гиацинт и Кипарис, занимающиеся музыкой и пением"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Иванов Александр Явление Христа народа (Явление Мессии).jpg", "Иванов А.И. Явление Христа народа (Явление Мессии)"));
 
             } else if (call_data.equals(ISTOMIN.toString())) {
                 execute(Sender.sendPhoto(chat_id, ROOT + "Истомин Константин Вузовки.png", "Истомин, Вузовки"));
@@ -291,6 +290,284 @@ public class TretGalSelectionHandler extends TelegramLongPollingBot {
             } else if (call_data.equals(KUSTODIEV.toString())) {
                 execute(Sender.sendPhoto(chat_id, ROOT + "Кустодиев Борис Большевик.jpg", "Кустодиев Борис Большевик"));
                 execute(Sender.sendPhoto(chat_id, ROOT + "Кустодиев Борис Московский трактир.jpg", "Кустодиев, Московский трактир"));
+
+            } else if (call_data.equals(LAVROVA.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Лаврова Анна Трикотажница.jpg", "Лаврова, Трикотажница"));
+
+            } else if (call_data.equals(LAGODA.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Лагода-Шишкина Ольга Рожь.jpg", "Лагода-Шишкина, Рожь"));
+
+            } else if (call_data.equals(LAGORIO.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Лагорио Лев Батум.jpg", "Лагорио, Батум"));
+
+            } else if (call_data.equals(LARIONOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Ларионов Михаил Портрет Н.С. Гончаровой.jpg", "Ларионов, Портрет Н.С. Гончаровой"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Ларионов Михаил Танцующие.jpg", "Ларионов, Танцующие"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Лприонов Михаил Ванька с Катькой. Иллюстрация к поэме А.Блока Двенадцать.png", "Лприонов, Ванька с Катькой. Иллюстрация к поэме А.Блока Двенадцать"));
+
+            } else if (call_data.equals(LEVITAN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Левитае Исаак Лесные фиалки и незабудки.jpg", "Левитан, Лесные фиалки и незабудки"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Левитан Исаак Березовая роща.jpg", "Левитан, Березовая роща"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Левитан Исаак Бурный день.jpg", "Левитан, Бурный день"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Левитан Исаак Золотая осень.jpg", "Левитан, Золотая осень"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Левитан Исаак Крым. В горах.jpg", "Левитан, Крым. В горах"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Левитан Исаак Над вечным покоем.jpg", "Левитан, Над вечным покоем"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Левитан Исаак Осеннее утро. Туман.jpg", "Левитан, Осеннее утро. Туман"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Левитан Исаак Осенний день. Сокольники.jpg", "Левитан, Осенний день. Сокольники"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Левитан Исаак Осень.jpg", "Левитан, Осень"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Левитан Исаак Разлив.png", "Левитан, Разлив"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Левитан Исаак Тихая обитель.jpg", "Левитан, Тихая обитель"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Левитан Исаак У омута.jpg", "Левитан, У омута"));
+
+            } else if (call_data.equals(LENTULOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Лентулов Аристарх Колокольня Ивана Великого.jpg", "Лентулов, Колокольня Ивана Великого"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Лентулов Аристарх Москва.jpg", "Лентулов, Москва"));
+
+            } else if (call_data.equals(LOSHAKOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Лошаков Олег Старый Владивосток.jpg", "Лошаков, Старый Владивосток"));
+
+            } else if (call_data.equals(LUBENNIKOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Лубенников Иван Портрет мальчика.jpg", "Лубенников, Портрет мальчика"));
+
+            } else if (call_data.equals(MAVRINA.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Маврина Татьяна В Колобовском переулке.jpg", "Маврина, В Колобовском переулке"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Маврина Татьяна Голубая натурщица.jpg", "Маврина, Голубая натурщица"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Маврина Татьяна Церковь Успения Пресвятой Богородицы в Гончарах.jpg", "Маврина, Церковь Успения Пресвятой Богородицы в Гончарах"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Маврина Татьяна Церковь Филиппа Апостола на Арбате.jpg", "Маврина, Церковь Филиппа Апостола на Арбате"));
+
+            } else if (call_data.equals(MAKOVSKY_VE.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Маковский Владимир Вечеринка.png", "Маковский В., Вечеринка"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Маковский Владимир За лекарством.png", "Маковский В., За лекарством"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Маковский Константин В мастерской художника.png", "Маковский В., В мастерской художника"));
+
+            } else if (call_data.equals(MALEVICH.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Малевич Казимир Сестры.jpg", "Малевич, Сестры"));
+
+            } else if (call_data.equals(MALAVIN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Малявин Филипп Вихрь.jpg", "Малявин, Вихрь"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Малявин Филипп Крестьянская девушка с чулком.jpg", "Малявин, Крестьянская девушка с чулком"));
+
+            } else if (call_data.equals(MASHKOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Машков Илья Автопортрет.jpg", "Машков, Автопортрет"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Машков Илья Натюрморт с фарфоровыми статуэтками.jpg", "Машков, Натюрморт с фарфоровыми статуэтками"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Машков Илья Портрет Е.И. Киркальди.jpg", "Машков, Портрет Е.И. Киркальди"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Машков Илья Снедб московская. Хлебы.jpg", "Машков, Снедь московская. Хлебы"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Машков Илья Фркты на блюде.png", "Машков, Фркты на блюде"));
+
+            } else if (call_data.equals(MILMAN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Мильман Адольф Натюрморт с куклой.jpg", "Мильман Адольф Натюрморт с куклой.jpg"));
+
+            } else if (call_data.equals(NESTEROV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Нестеров Михаил Видение отроку Варфоломею.jpg", "Нестеров, Видение отроку Варфоломею"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Нестеров Михаил Голова девочки.jpg", "Нестеров, Голова девочки"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Нестеров Михаил Молчание.jpg", "Нестеров, Молчание"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Нестеров Михаил Осенний пейзаж.jpg", "Нестеров, Осенний пейзаж"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Нестеров Михаил Портрет академика А.Н. Северцова.png", "Нестеров, Портрет академика А.Н. Северцова"));
+
+            } else if (call_data.equals(NESTEROVA.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Нестерова Наталья Зимний парк. Нью-Йорк.jpg", "Нестерова, Зимний парк. Нью-Йорк"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Нестерова Наталья Кафе в Ялте.jpg", "Нестерова, Кафе в Ялте"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Нестерова Наталья Крик.jpg", "Нестерова, Крик"));
+
+            } else if (call_data.equals(NIVINSKY.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Нивинский Игнатий Цветы.jpg", "Нивинский, Цветы"));
+
+            } else if (call_data.equals(NIKICH.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Никич Анатолий Праздничный натюрморт.png", "Никич, Праздничный натюрморт"));
+
+            } else if (call_data.equals(NIKONOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Никонов Павел Красный Питер.png", "Никонов, Красный Питер"));
+
+            } else if (call_data.equals(OSTROUCHOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Остроухов Илья Сиверко.png", "Остроухов, Сиверко"));
+
+            } else if (call_data.equals(PAVLOVEC.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Павловец Никита Воскрешение Лазаря.png", "Павловец, Воскрешение Лазаря"));
+
+            } else if (call_data.equals(PEROV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Перов Василий Дворник-самоучка.png", "Перов, Дворник-самоучка"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Перов Василий Дилетант.png", "Перов, Дилетант"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Перов Василий Охотники на привале.jpg", "Перов, Охотники на привале"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Перов Василий Парижская шарманщица.jpg", "Перов, Парижская шарманщица"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Перов Василий Портрет Ф.М. Достоевского.jpg", "Перов, Портрет Ф.М. Достоевского"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Перов Василий Портртет А.Н. Островского.png", "Перов, Портртет А.Н. Островского"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Перов Василий Приезд гувернантки в купеческий дом.png", "Перов, Приезд гувернантки в купеческий дом"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Перов Василий Тройка. Ученики-мастеровые везут воду.png", "Перов, Тройка. Ученики-мастеровые везут воду"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Перов Василий Утополенница.jpg", "Перов, Утополенница"));
+
+            } else if (call_data.equals(PETROV_VODKIN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Петров-Водкин Кузбма Розовый натюрморт.png", "Петров-Водкин, Розовый натюрморт"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Петров-Водкин Кузьма Купание красного коня.jpg", "Петров-Водкин, Купание красного коня"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Петров-Водкин Кузьма Новоселье. (Рабочий Петроград).png", "Петров-Водкин, Новоселье. (Рабочий Петроград)"));
+
+            } else if (call_data.equals(PIROSNAMASHVILI.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Пиросманашвили Нико (Николай Асланович) Рыбак среди скал.jpg", "Пиросманашвили, Рыбак среди скал"));
+
+            } else if (call_data.equals(POLENOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Поленов Василий Заросший пруд.png", "Поленов, Заросший пруд"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Поленов Василий Мертвое море.png", "Поленов, Мертвое море"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Поленов Василий Московский дворик.jpg", "Поленов, Московский дворик"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Поленов Василий Предел храма Гроба Господня.jpg", "Поленов, Предел храма Гроба Господня"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Поленов Василий Ранний снег.png", "Поленов, Ранний снег"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Поленов Василий Фасад храма Гроба Господня.jpg", "Поленов, Фасад храма Гроба Господня"));
+
+            } else if (call_data.equals(POPKOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Попков Виктор Северная песня. Ой, да как всех мужей побрали на войну.jpg", "Попков, Северная песня. Ой, да как всех мужей побрали на войну"));
+
+            } else if (call_data.equals(PUKIREV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Пукирев Василий Неравный брак.jpg", "Пукирев, Неравный брак"));
+
+            } else if (call_data.equals(RABIN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Рабин Оскар Виза на кладбище.png", "Рабин, Виза на кладбище"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Рабин Оскар Оптимистический пейзаж.jpg", "Рабин, Оптимистический пейзаж"));
+
+            } else if (call_data.equals(REPIN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Репин Илья Запорожцы пишут письмо турецкому султану.png", "Репин, Запорожцы пишут письмо турецкому султану"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Репин Илья Не ждали.png", "Репин, Не ждали"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Репин Илья Портрет баронессы В.И. Икскуль фон Гильденбандт.jpg", "Репин, Портрет баронессы В.И. Икскуль фон Гильденбандт"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Репин Илья Портрет В.И. Репиной в детстве.jpg", "Репин, Портрет В.И. Репиной в детстве"));
+
+            } else if (call_data.equals(RERIH.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Рерих Николай Свято-Сергиева часовня на путях. Гималаи.jpg", "Рерих, Свято-Сергиева часовня на путях. Гималаи"));
+
+            } else if (call_data.equals(ROGINSKY.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Рогинский Михаил Коммунальная кухня.jpg", "Рогинский, Коммунальная кухня"));
+
+            } else if (call_data.equals(ROZANOVA.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Розанова Ольга Зима. Снегири на дереве.jpg", "Розанова, Зима. Снегири на дереве"));
+
+            } else if (call_data.equals(ROKOTOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Рокотов Федор Портрет неизвестного в треуголке.png", "Рокотов, Портрет неизвестного в треуголке"));
+
+            } else if (call_data.equals(RUBLEV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Рублев Андрей Архангел Михаил, из Деисусного (Звенигородского) чина.png", "Рублев, Архангел Михаил, из Деисусного (Звенигородского) чина"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Рублев Андрей Святая Троица.png", "Рублев, Святая Троица"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Рублев Андрей Христос Вседержитель, из Деисусного (Звенигородского) чина.png", "Рублев, Христос Вседержитель, из Деисусного (Звенигородского) чина"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Рублев Андрей Черный Даниил Воскресение - Сошествие во ад.png", "Рублев, Черный Даниил Воскресение - Сошествие во ад"));
+
+            } else if (call_data.equals(SAVRASOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Саврасов Алексей Весенний пейзаж.png", "Саврасов, Весенний пейзаж"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Саврасов Алексей Грачи прилетели.jpg", "Саврасов, Грачи прилетели"));
+
+            } else if (call_data.equals(SALACHOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Салахов Таир Женщины Апшерона.jpg", "Салахов, Женщины Апшерона"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Салахов Таир Мексиканская коррида.jpg", "Салахов, Мексиканская коррида"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Салахов Ьатр Тихий Каспий. (Скалы).jpg", "Салахов, Тихий Каспий. (Скалы)"));
+
+            } else if (call_data.equals(SAPUNOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Сапунов Николай Голубые гортензии.jpg", "Сапунов, Голубые гортензии"));
+
+            } else if (call_data.equals(SEROV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Серов Валентин Девочка с персиками.jpg", "Серов Валентин Девочка с персиками.jpg"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Серов Валентин Мика Морозов.jpg", "Серов, Мика Морозов"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Серов Валентин Одиссей и Навзикая.jpg", "Серов, Одиссей и Навзикая"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Серов Валентин Портет Н.Я. Дервиз с ребенком.jpg", "Серов, Портет Н.Я. Дервиз с ребенком"));
+
+            } else if (call_data.equals(SITNIKOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Ситников Александр Раненый петух.jpg", "Ситников, Раненый петух"));
+
+            } else if (call_data.equals(SOMOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Сомов Константин Арлекин и Смерть.jpg", "Сомов, Арлекин и Смерть"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Сомов Константин Дама в голубом.jpg", "Сомов, Дама в голубом"));
+
+            } else if (call_data.equals(SOTNIKOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Сотников Алексей Дед Мазай и зайцы.jpg", "Сотников, Дед Мазай и зайцы"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Сотников Алексей Материнство...jpg", "Сотников, Материнство"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Сотников Алексей Материнство.jpg", "Сотников, Материнство"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Сотников Алексей Материнство (Переполох).jpg", "Сотников, Материнство (Переполох)"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Сотников Алексей Рождение жизни.jpg", "Сотников, Рождение жизни"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Сотников Алексей Ягненок.jpg", "Сотников, Ягненок"));
+
+            } else if (call_data.equals(SUDEIKIN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Судейкин Сергей Гулянье.jpg", "Судейкин, Гулянье"));
+
+            } else if (call_data.equals(SURIKOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Суриков Василий Боярыня Морозова.jpg", "Суриков, Боярыня Морозова"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Суриков Василий Портет О.В. Суриковой в детстве.png", "Суриков, Портет О.В. Суриковой в детстве"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Суриков Василий Сибирская красавица.png", "Суриков, Сибирская красавица"));
+
+            } else if (call_data.equals(TKACHEV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Ткачев Сергей Ткачев Алексей У старых бань.png", "Ткачев, Ткачев Алексей У старых бань"));
+
+            } else if (call_data.equals(TOLSTOY.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Толстой Федор Букет цветов, бабочка и птичка.jpg", "Толстой, Букет цветов, бабочка и птичка"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Толстой Федор Нарциссы.png", "Толстой, Нарциссы"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Толстой Федор Ягоды красной и белой смородины.jpg", "Толстой, Ягоды красной и белой смородины"));
+
+            } else if (call_data.equals(TROPININ.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Тропинин Василий Кружевница.png", "Тропинин, Кружевница"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Тропинин Василий Пряха.jpg", "Тропинин, Пряха"));
+
+            } else if (call_data.equals(TRUBECKOY.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Трубецкой Павел Детсткие головки.jpg", "Трубецкой, Детсткие головки"));
+
+            } else if (call_data.equals(TURNOVA.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Турнова Наталия Знать.jpg", "Турнова, Знать"));
+
+            } else if (call_data.equals(TYRSA.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Тырса Иван Лицо Анны Ахматовой.jpg", "Тырса, Лицо Анны Ахматовой"));
+
+            } else if (call_data.equals(UDALCOVA.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Удальцова Надежда Автопортрет.jpg", "Удальцова, Автопортрет"));
+
+            } else if (call_data.equals(USHAKOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Ушаков Симон Богоматерь Киккская.jpg", "Ушаков, Богоматерь Киккская"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Ушаков Симон Спас Нерукотворный.png", "Ушаков, Спас Нерукотворный"));
+
+            } else if (call_data.equals(FALK.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Фальк Роберт Москва. Улица Горького.jpg", "Фальк, Москва. Улица Горького"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Фальк Роберт Старуха. Франция.jpg", "Фальк, Старуха. Франция"));
+
+            } else if (call_data.equals(FEDOTOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Федотов Павел Завтрак аристократа.png", "Федотов, Завтрак аристократа"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Федотов Павел Сватовство майора.jpg", "Федотов, Сватовство майора"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Федотов Павел Свежий кавалер. Утро чиновника, получившего первый крестик.jpg", "Федотов, Свежий кавалер. Утро чиновника, получившего первый крестик"));
+
+            } else if (call_data.equals(FILONOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Филонов Павел Голгофа.png", "Филонов, Голгофа"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Филонов Павел Голова.png", "Филонов, Голова"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Филонов Павел Головы.png", "Филонов, Головы"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Филонов Павел Композиция. Корабли.png", "Филонов, Композиция. Корабли"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Филонов Павел Формула Вселенной.png", "Филонов, Формула Вселенной"));
+
+            } else if (call_data.equals(HOHRAKOV.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Хохряков Николай Дворик. Дом, освещенный солнцем.png", "Хохряков, Дворик. Дом, освещенный солнцем"));
+
+            } else if (call_data.equals(CHASHNIC.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Чашник Илья Супрематизм.jpg", "Чашник, Супрематизм"));
+
+            } else if (call_data.equals(CHEKRYGIN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Чекрыгин Василий Расстрел.jpg", "Чекрыгин, Расстрел"));
+
+            } else if (call_data.equals(CHEREMUSHKIN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Черемушкин Герман Бассейн Москва Из серии Москва.jpg", "Черемушкин, Бассейн Москва Из серии Москва"));
+
+            } else if (call_data.equals(SHANKS.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Шанкс Эмилия Новенькая в школе.jpg", "Шанкс, Новенькая в школе"));
+
+            } else if (call_data.equals(SHACHOVSKY.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Шаховский Дмитрий Девочка с кошкой.jpg", "Шаховский, Девочка с кошкой"));
+
+            } else if (call_data.equals(SHEVCHENKO.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Шевченко Александр Голова девушки в платке.jpg", "Шевченко, Голова девушки в платке"));
+
+            } else if (call_data.equals(SHISHKIN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Шишкин Иван Рожь.jpg", "Шишкин, Рожь"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Шишкин Иван Утро в сосновом лесу.jpg", "Шишкин, Утро в сосновом лесу"));
+
+            } else if (call_data.equals(CHEDRIN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Щедрин Сильвестр Новый Рим. Замок Святого Ангела.jpg", "Щедрин, Новый Рим. Замок Святого Ангела"));
+
+            } else if (call_data.equals(CHIPICIN.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Щипицын Александр Женщины, идущие за клюквой.png", "Щипицын Александр Женщины, идущие за клюквой.png"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Щипицын Александр На золотом прииске.jpg", "Щипицын, На золотом прииске"));
+
+            } else if (call_data.equals(ERASSI.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Эрасси Михаил Рейхенбахский водопад у Мейрингена в Швейцарии.png", "Эрасси, Рейхенбахский водопад у Мейрингена в Швейцарии"));
+
+            } else if (call_data.equals(YAROSHENKO.toString())) {
+                execute(Sender.sendPhoto(chat_id, ROOT + "Ярошенко Николай Портрет актрисы Пелагеи Антиповны Стрепетовой.png", "Ярошенко, Портрет актрисы Пелагеи Антиповны Стрепетовой"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Ярошенко Николай Портрет неизвестной.png", "Ярошенко, Портрет неизвестной"));
 
             }
 

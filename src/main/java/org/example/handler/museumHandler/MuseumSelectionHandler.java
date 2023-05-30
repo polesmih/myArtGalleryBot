@@ -2,16 +2,19 @@ package org.example.handler.museumHandler;
 
 import lombok.SneakyThrows;
 import org.example.bot.settings.ConfigSettings;
-import org.example.bot.settings.replyKeyboards.AlphabetKeyboard;
+import org.example.handler.rusMusHandler.RusMusAlphabetKeyboard;
+import org.example.handler.tretGalHandler.TretGalAlphabetKeyboard;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
-import static org.example.bot.settings.MessagesConst.ABC;
+import static org.example.bot.settings.MessagesConst.*;
+import static org.example.bot.settings.enums.Museum.*;
 
 public class MuseumSelectionHandler extends TelegramLongPollingBot {
 
     long chat_id;
+    String message_text;
 
     private final static ConfigSettings settings = ConfigSettings.getInstance();
 
@@ -30,39 +33,32 @@ public class MuseumSelectionHandler extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         update.getUpdateId();
         chat_id = update.getMessage().getChatId();
+        message_text = update.getMessage().getText();
+
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(update.getMessage().getChatId().toString());
 
         if (update.hasMessage() && update.getMessage().hasText()) {
 
-            sendMessage.setText(ABC);
-            sendMessage.setReplyMarkup(AlphabetKeyboard.createAlphabetKeyboard());
-            execute(sendMessage);
+            if (message_text.equals(HERMITAGE.getMuseumType())) {
+//                sendMessage.setText(ABC);
+//                sendMessage.setReplyMarkup(AlphabetKeyboard.createAlphabetKeyboard());
+//                execute(sendMessage);
 
-//            switch (update.getMessage().getText()) {
-//
-//                case HERMITAGE:
-////                    execute(MessageHandler.sendMessage(chat_id, HG_MENU));
-//                    sendMessage.setText(ABC);
-//                    sendMessage.setReplyMarkup(AlphabetKeyboard.createAlphabetKeyboard());
-//                    execute(sendMessage);
-//                    break;
-//
-//                case RUS_MUS:
-////                    execute(MessageHandler.sendMessage(chat_id, TG_MENU));
-//                    sendMessage.setText(ABC);
-//                    sendMessage.setReplyMarkup(RusMusKeyboard.createRusMusKeyboard());
-//                    execute(sendMessage);
-//                    break;
-//
-//                case TRET_GAL:
-////                    execute(MessageHandler.sendMessage(chat_id, RM_MENU));
-//                    sendMessage.setText(ABC);
-//                    sendMessage.setReplyMarkup(AlphabetKeyboard.createTretGalKeyboard());
-//                    execute(sendMessage);
-//                    break;
-//
-//            }
+            } else if (message_text.equals(RUS_MUS.getMuseumType())) {
+                sendMessage.setText(ABC);
+                sendMessage.setReplyMarkup(RusMusAlphabetKeyboard.createRusMusAlphabetKeyboard());
+                execute(sendMessage);
+
+
+            } else if (message_text.equals(TRET_GAL.getMuseumType())) {
+                sendMessage.setText(ABC);
+                sendMessage.setReplyMarkup(TretGalAlphabetKeyboard.createTretGalAlphabetKeyboard());
+                execute(sendMessage);
+
+            }
+
+
         }
     }
 
