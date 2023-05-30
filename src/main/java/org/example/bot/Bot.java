@@ -3,10 +3,11 @@ package org.example.bot;
 import lombok.SneakyThrows;
 import org.example.bot.settings.ConfigSettings;
 import org.example.bot.settings.Sender;
+import org.example.bot.settings.enums.RusMusArtists;
 import org.example.handler.hermitageHandler.HermitageSelectionHandler;
 import org.example.handler.hermitageHandler.HermitageTypes;
 import org.example.handler.rusMusHandler.RusMusSelectionHandler;
-import org.example.handler.rusMusHandler.RusMusTypes;
+import org.example.handler.rusMusHandler.RusMusAlphabetTypes;
 import org.example.bot.settings.enums.TretGalArtists;
 import org.example.handler.tretGalHandler.TretGalSelectionHandler;
 import org.example.handler.tretGalHandler.TretGalAlphabetTypes;
@@ -34,7 +35,7 @@ public class Bot extends TelegramLongPollingBot {
     MuseumTypes musTypes = new MuseumTypes();
     TretGalAlphabetTypes tretGalAlphabetTypes = new TretGalAlphabetTypes();
     HermitageTypes hgTypes = new HermitageTypes();
-    RusMusTypes rusMusTypes = new RusMusTypes();
+    RusMusAlphabetTypes rusMusAlphabetTypes = new RusMusAlphabetTypes();
     CommandTypes commandType = new CommandTypes();
     CommandSelectionHandler commandHandler = new CommandSelectionHandler();
     private final static ConfigSettings settings = ConfigSettings.getInstance();
@@ -80,7 +81,7 @@ public class Bot extends TelegramLongPollingBot {
                 tretGalHandler.onUpdateReceived(update);
 
 
-            } else if (rusMusTypes.types().contains(message_text)) {
+            } else if (rusMusAlphabetTypes.types().contains(message_text)) {
                 rusMusHandler.onUpdateReceived(update);
 
             } else if (hgTypes.types().contains(message_text)) {
@@ -97,6 +98,8 @@ public class Bot extends TelegramLongPollingBot {
 
             if (Arrays.toString(TretGalArtists.values()).contains(call_data)) {
                 tretGalHandler.onUpdateReceived(update);
+            } else if (Arrays.toString(RusMusArtists.values()).contains(call_data)) {
+                rusMusHandler.onUpdateReceived(update);
             }
 
 

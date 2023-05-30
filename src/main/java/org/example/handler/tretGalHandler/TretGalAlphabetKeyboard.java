@@ -1,26 +1,27 @@
-package org.example.bot.settings.replyKeyboards;
+package org.example.handler.tretGalHandler;
 
-import org.example.bot.settings.enums.Museum;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 
 import java.util.Arrays;
 
-import static org.example.bot.settings.enums.Museum.*;
 
+public class TretGalAlphabetKeyboard {
 
-public class MuseumKeyboard {
-
-    public ReplyKeyboardMarkup createMuseumKeyboard() {
+    public static ReplyKeyboardMarkup createTretGalAlphabetKeyboard() {
 
         KeyboardRow row1 = new KeyboardRow();
-        row1.add(HERMITAGE.getMuseumType());
+        row1.add("А - Б");
+        row1.add("В - Ж");
 
         KeyboardRow row2 = new KeyboardRow();
-        row2.add(RUS_MUS.getMuseumType());
+        row2.add("З - К");
+        row2.add("Л - Н");
+        row2.add("О - Р");
 
         KeyboardRow row3 = new KeyboardRow();
-        row3.add(TRET_GAL.getMuseumType());
+        row3.add("С - У");
+        row3.add("Ф - Я");
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         replyKeyboardMarkup.setKeyboard(Arrays.asList(row1, row2, row3));

@@ -67,8 +67,8 @@ public class TretGalInlineKeyboardLn {
         inlineKeyboardButton9.setText(MAVRINA.getArtName());
         inlineKeyboardButton9.setCallbackData(MAVRINA.toString());
         InlineKeyboardButton inlineKeyboardButton10 = new InlineKeyboardButton();
-        inlineKeyboardButton10.setText(MAKOVSKY.getArtName());
-        inlineKeyboardButton10.setCallbackData(MAKOVSKY.toString());
+        inlineKeyboardButton10.setText(MAKOVSKY_VE.getArtName());
+        inlineKeyboardButton10.setCallbackData(MAKOVSKY_VE.toString());
         rowInline5.add(inlineKeyboardButton9);
         rowInline5.add(inlineKeyboardButton10);
 
