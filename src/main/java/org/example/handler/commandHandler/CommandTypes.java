@@ -3,7 +3,7 @@ package org.example.handler.commandHandler;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.example.bot.settings.enums.Command.*;
+import static org.example.bot.settings.enums.Commands.*;
 
 public class CommandTypes {
 

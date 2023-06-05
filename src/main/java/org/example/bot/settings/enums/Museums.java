@@ -1,6 +1,6 @@
 package org.example.bot.settings.enums;
 
-public enum Museum {
+public enum Museums {
 
    HERMITAGE ("Эрмитаж,\nколлекция западноевропейской живописи"),
    RUS_MUS ("Русский музей"),
@@ -9,7 +9,7 @@ public enum Museum {
     private final String museumType;
 
 
-    Museum(String museumType) {
+    Museums(String museumType) {
         this.museumType = museumType;
     }
 

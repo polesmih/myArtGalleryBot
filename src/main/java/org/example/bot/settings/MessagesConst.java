@@ -16,14 +16,26 @@ public class MessagesConst {
 
     public final static String ABC = "Выбери заглавную букву фамилии художника " + DOWN;
 
-    public final static String ART = "Чтобы увидеть картины, нажми на фамилию художника " + DOWN;
+    public final static String ART = "Чтобы увидеть картины, нажми на фамилию художника или перейди в полную коллекцию на сайте музея " + DOWN;
+    public final static String UNKNOWN = "Неизвестный запрос... " + THINKING;
+
+    public final static String URL_TG =
+            "https://my.tretyakov.ru/app/gallery/?utm_source=saitgtg&utm_medium=referral&utm_campaign=mainmenu&utm_content=collection";
+
+    public final static String URL_RM =
+            "https://rusmuseumvrm.ru/collections/index.php?ysclid=liiihq7x1m601031688";
+
+    public final static String URL_HERM =
+            "https://collections.hermitagemuseum.org/entity/OBJECT?fundcoll=1418549257";
+
+
+
+    public final static String ABOUT = "Этот проект создан для отдыха " +
+            "и расширения кругозора.\nЕсли нужно заняться делами, " +
+            "приглашаем воспользоваться ботом " +
+            "\nhttps://t.me/SimpleForms_bot";
 
 
     public final static String VISIT = "Количество посещений " + VISIT_COUNT + " ";
-
-    public final static String MENU = "А теперь просто отправь номер, " +
-            "указанный рядом с картиной, чтобы ее увидеть:\n";
-
-    public final static String UNKNOWN = "Неизвестный запрос... " + THINKING;
 
 }

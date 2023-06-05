@@ -7,8 +7,9 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.example.bot.settings.MessagesConst.ART;
-import static org.example.bot.settings.enums.RusMusArtists.*;
+import static org.example.bot.settings.MessagesConst.*;
+import static org.example.bot.settings.enums.AlphabetGroup.*;
+import static org.example.bot.settings.enums.artists.RusMusArtists.*;
 
 public class RusMusInlineKeyboardUy {
 
@@ -112,6 +113,13 @@ public class RusMusInlineKeyboardUy {
         rowInline9.add(inlineKeyboardButton17);
         rowInline9.add(inlineKeyboardButton18);
 
+        List<InlineKeyboardButton> rowInline10 = new ArrayList<>();
+        InlineKeyboardButton inlineKeyboardButton19 = new InlineKeyboardButton();
+        inlineKeyboardButton19.setText(WEB_RM.getAbcGroup());
+        inlineKeyboardButton19.setUrl(URL_RM);
+        inlineKeyboardButton19.setCallbackData(WEB_RM.toString());
+        rowInline10.add(inlineKeyboardButton19);
+
         rowsInline.add(rowInline1);
         rowsInline.add(rowInline2);
         rowsInline.add(rowInline3);
@@ -121,6 +129,7 @@ public class RusMusInlineKeyboardUy {
         rowsInline.add(rowInline7);
         rowsInline.add(rowInline8);
         rowsInline.add(rowInline9);
+        rowsInline.add(rowInline10);
 
         markupInline.setKeyboard(rowsInline);
         message.setReplyMarkup(markupInline);

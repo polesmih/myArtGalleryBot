@@ -7,8 +7,9 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.example.bot.settings.MessagesConst.ART;
-import static org.example.bot.settings.enums.RusMusArtists.*;
+import static org.example.bot.settings.MessagesConst.*;
+import static org.example.bot.settings.enums.AlphabetGroup.*;
+import static org.example.bot.settings.enums.artists.RusMusArtists.*;
 
 public class RusMusInlineKeyboardAv {
 
@@ -87,8 +88,8 @@ public class RusMusInlineKeyboardAv {
         inlineKeyboardButton13.setText(R_BOGOLUBOV.getArtName());
         inlineKeyboardButton13.setCallbackData(R_BOGOLUBOV.toString());
         InlineKeyboardButton inlineKeyboardButton14 = new InlineKeyboardButton();
-        inlineKeyboardButton14.setText(R_BONDAREVSKY.getArtName());
-        inlineKeyboardButton14.setCallbackData(R_BONDAREVSKY.toString());
+        inlineKeyboardButton14.setText(R_BODAREVSKY.getArtName());
+        inlineKeyboardButton14.setCallbackData(R_BODAREVSKY.toString());
         rowInline7.add(inlineKeyboardButton13);
         rowInline7.add(inlineKeyboardButton14);
 
@@ -142,6 +143,13 @@ public class RusMusInlineKeyboardAv {
         rowInline12.add(inlineKeyboardButton23);
         rowInline12.add(inlineKeyboardButton24);
 
+        List<InlineKeyboardButton> rowInline13 = new ArrayList<>();
+        InlineKeyboardButton inlineKeyboardButton25 = new InlineKeyboardButton();
+        inlineKeyboardButton25.setText(WEB_RM.getAbcGroup());
+        inlineKeyboardButton25.setUrl(URL_RM);
+        inlineKeyboardButton25.setCallbackData(WEB_RM.toString());
+        rowInline13.add(inlineKeyboardButton25);
+
         rowsInline.add(rowInline1);
         rowsInline.add(rowInline2);
         rowsInline.add(rowInline3);
@@ -154,6 +162,7 @@ public class RusMusInlineKeyboardAv {
         rowsInline.add(rowInline10);
         rowsInline.add(rowInline11);
         rowsInline.add(rowInline12);
+        rowsInline.add(rowInline13);
 
         markupInline.setKeyboard(rowsInline);
         message.setReplyMarkup(markupInline);
