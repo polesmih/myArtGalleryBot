@@ -3,7 +3,7 @@ package org.example.handler.museumHandler;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.example.bot.settings.enums.Museum.*;
+import static org.example.bot.settings.enums.Museums.*;
 
 
 public class MuseumTypes {

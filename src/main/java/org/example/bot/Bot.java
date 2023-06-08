@@ -3,12 +3,13 @@ package org.example.bot;
 import lombok.SneakyThrows;
 import org.example.bot.settings.ConfigSettings;
 import org.example.bot.settings.Sender;
-import org.example.bot.settings.enums.RusMusArtists;
+import org.example.bot.settings.enums.artists.HermitageArtists;
+import org.example.bot.settings.enums.artists.RusMusArtists;
 import org.example.handler.hermitageHandler.HermitageSelectionHandler;
-import org.example.handler.hermitageHandler.HermitageTypes;
+import org.example.handler.hermitageHandler.HermitageAlphabetTypes;
 import org.example.handler.rusMusHandler.RusMusSelectionHandler;
 import org.example.handler.rusMusHandler.RusMusAlphabetTypes;
-import org.example.bot.settings.enums.TretGalArtists;
+import org.example.bot.settings.enums.artists.TretGalArtists;
 import org.example.handler.tretGalHandler.TretGalSelectionHandler;
 import org.example.handler.tretGalHandler.TretGalAlphabetTypes;
 import org.example.handler.commandHandler.CommandSelectionHandler;
@@ -34,7 +35,7 @@ public class Bot extends TelegramLongPollingBot {
     HermitageSelectionHandler hgHandler = new HermitageSelectionHandler();
     MuseumTypes musTypes = new MuseumTypes();
     TretGalAlphabetTypes tretGalAlphabetTypes = new TretGalAlphabetTypes();
-    HermitageTypes hgTypes = new HermitageTypes();
+    HermitageAlphabetTypes hgAlphabetTypes = new HermitageAlphabetTypes();
     RusMusAlphabetTypes rusMusAlphabetTypes = new RusMusAlphabetTypes();
     CommandTypes commandType = new CommandTypes();
     CommandSelectionHandler commandHandler = new CommandSelectionHandler();
@@ -67,31 +68,20 @@ public class Bot extends TelegramLongPollingBot {
             message_text = update.getMessage().getText();
             chat_id = update.getMessage().getChatId();
 
-
-            //Done
             if (commandType.types().contains(message_text)) {
                 commandHandler.onUpdateReceived(update);
-
-            //Done
             } else if (musTypes.types().contains(message_text)) {
                 museumHandler.onUpdateReceived(update);
-
-            //Done
             } else if (tretGalAlphabetTypes.types().contains(message_text)) {
                 tretGalHandler.onUpdateReceived(update);
-
-
             } else if (rusMusAlphabetTypes.types().contains(message_text)) {
                 rusMusHandler.onUpdateReceived(update);
-
-            } else if (hgTypes.types().contains(message_text)) {
+            } else if (hgAlphabetTypes.types().contains(message_text)) {
                 hgHandler.onUpdateReceived(update);
-
 
             } else {
                 execute(Sender.sendMessage(chat_id, UNKNOWN));
             }
-
 
         } else if (update.hasCallbackQuery()) {
             String call_data = update.getCallbackQuery().getData();
@@ -100,8 +90,9 @@ public class Bot extends TelegramLongPollingBot {
                 tretGalHandler.onUpdateReceived(update);
             } else if (Arrays.toString(RusMusArtists.values()).contains(call_data)) {
                 rusMusHandler.onUpdateReceived(update);
+            } else if (Arrays.toString(HermitageArtists.values()).contains(call_data)) {
+                hgHandler.onUpdateReceived(update);
             }
-
 
         }
     }

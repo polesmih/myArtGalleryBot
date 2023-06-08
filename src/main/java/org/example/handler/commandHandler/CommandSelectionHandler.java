@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 
 //import static org.example.bot.settings.CommandConst.*;
 import static org.example.bot.settings.MessagesConst.*;
-import static org.example.bot.settings.enums.Command.*;
+import static org.example.bot.settings.enums.Commands.*;
 
 public class CommandSelectionHandler extends TelegramLongPollingBot {
 
@@ -72,8 +72,9 @@ public class CommandSelectionHandler extends TelegramLongPollingBot {
 
 
             } else if (message_text.equals(INFO.getCommandType())) {
-                execute(Sender.sendMessage(chat_id,
-                        VISIT + UserConnection.countOfVisits()));
+//                execute(Sender.sendMessage(chat_id,
+//                        VISIT + UserConnection.countOfVisits()));
+                execute(Sender.sendMessage(chat_id, ABOUT));
 
             }
 

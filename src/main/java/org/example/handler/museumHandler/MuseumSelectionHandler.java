@@ -2,6 +2,7 @@ package org.example.handler.museumHandler;
 
 import lombok.SneakyThrows;
 import org.example.bot.settings.ConfigSettings;
+import org.example.handler.hermitageHandler.HermitageAlphabetKeyboard;
 import org.example.handler.rusMusHandler.RusMusAlphabetKeyboard;
 import org.example.handler.tretGalHandler.TretGalAlphabetKeyboard;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -9,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import static org.example.bot.settings.MessagesConst.*;
-import static org.example.bot.settings.enums.Museum.*;
+import static org.example.bot.settings.enums.Museums.*;
 
 public class MuseumSelectionHandler extends TelegramLongPollingBot {
 
@@ -41,9 +42,9 @@ public class MuseumSelectionHandler extends TelegramLongPollingBot {
         if (update.hasMessage() && update.getMessage().hasText()) {
 
             if (message_text.equals(HERMITAGE.getMuseumType())) {
-//                sendMessage.setText(ABC);
-//                sendMessage.setReplyMarkup(AlphabetKeyboard.createAlphabetKeyboard());
-//                execute(sendMessage);
+                sendMessage.setText(ABC);
+                sendMessage.setReplyMarkup(HermitageAlphabetKeyboard.createHermitageAlphabetKeyboard());
+                execute(sendMessage);
 
             } else if (message_text.equals(RUS_MUS.getMuseumType())) {
                 sendMessage.setText(ABC);

@@ -7,8 +7,9 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.example.bot.settings.MessagesConst.ART;
-import static org.example.bot.settings.enums.TretGalArtists.*;
+import static org.example.bot.settings.MessagesConst.*;
+import static org.example.bot.settings.enums.AlphabetGroup.*;
+import static org.example.bot.settings.enums.artists.TretGalArtists.*;
 
 public class TretGalInlineKeyboardZk {
 
@@ -118,6 +119,13 @@ public class TretGalInlineKeyboardZk {
         inlineKeyboardButton19.setCallbackData(KUSTODIEV.toString());
         rowInline10.add(inlineKeyboardButton19);
 
+        List<InlineKeyboardButton> rowInline11 = new ArrayList<>();
+        InlineKeyboardButton inlineKeyboardButton20 = new InlineKeyboardButton();
+        inlineKeyboardButton20.setText(WEB_TG.getAbcGroup());
+        inlineKeyboardButton20.setUrl(URL_TG);
+        inlineKeyboardButton20.setCallbackData(WEB_TG.toString());
+        rowInline11.add(inlineKeyboardButton20);
+
         rowsInline.add(rowInline1);
         rowsInline.add(rowInline2);
         rowsInline.add(rowInline3);
@@ -128,6 +136,7 @@ public class TretGalInlineKeyboardZk {
         rowsInline.add(rowInline8);
         rowsInline.add(rowInline9);
         rowsInline.add(rowInline10);
+        rowsInline.add(rowInline11);
 
         markupInline.setKeyboard(rowsInline);
         message.setReplyMarkup(markupInline);

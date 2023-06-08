@@ -1,9 +1,6 @@
 package org.example.bot.settings.enums;
 
-import java.util.Arrays;
-import java.util.stream.Stream;
-
-public enum Command {
+public enum Commands {
 
     START ("/start"),
     KEY ("/key"),
@@ -13,7 +10,7 @@ public enum Command {
     private final String commandType;
 
 
-    Command(String commandType) {
+    Commands(String commandType) {
         this.commandType = commandType;
     }
 

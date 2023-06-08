@@ -1,4 +1,4 @@
-package org.example.bot.settings.enums;
+package org.example.bot.settings.enums.artists;
 
 public enum RusMusArtists {
 
@@ -15,7 +15,7 @@ public enum RusMusArtists {
     R_BILIBIN ("Билибин"),
     R_BOGDANOV ("Богданов-Бельский"),
     R_BOGOLUBOV ("Боголюбов"),
-    R_BONDAREVSKY ("Бондаревский"),
+    R_BODAREVSKY ("Бодаревский"),
     R_BORISOV_MUSATOV ("Борисов-Мусатов"),
     R_BRODSKY ("Бродский"),
     R_BRONNIKOV ("Бронников"),
@@ -81,13 +81,14 @@ public enum RusMusArtists {
     R_PETROV_VODKIN ("Петров-Водкин"),
     R_PLASTOV ("Пластов"),
     R_POLENOV ("Поленов"),
-    R_POPOV ("Попов"),
+    R_POPOV ("Попов (Московский)"),
+    R_POPOVA ("Попова"),
     R_PUNI ("Пуни"),
     R_RAEV ("Раев"),
     R_REITERN ("Рейтерн"),
     R_REPIN ("Репин"),
     R_RERIH ("Рерих"),
-    R_ROZANOV ("Розанов"),
+    R_ROZANOVA ("Розанова"),
     R_RUSAKOVA ("Русакова"),
     R_RUTKOVSKY ("Рутковский"),
     R_RYLOV ("Рылов"),

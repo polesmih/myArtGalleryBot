@@ -7,14 +7,14 @@ import org.example.handler.tretGalHandler.inlineKeyboards.*;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
-import static org.example.bot.settings.enums.TretGalArtists.*;
+import static org.example.bot.settings.enums.AlphabetGroup.*;
+import static org.example.bot.settings.enums.artists.TretGalArtists.*;
 
 public class TretGalSelectionHandler extends TelegramLongPollingBot {
 
     String message_text;
     private final static ConfigSettings settings = ConfigSettings.getInstance();
     public final static String ROOT = settings.getPath() + "\\tretGal\\";
-
 
     @Override
     public String getBotUsername() {
@@ -33,19 +33,19 @@ public class TretGalSelectionHandler extends TelegramLongPollingBot {
             message_text = update.getMessage().getText();
             long chat_id = update.getMessage().getChatId();
 
-            if (message_text.equals("А - Б")) {
+            if (message_text.equals(A_B_TG.getAbcGroup())) {
                 execute(TretGalInlineKeyboardAb.tretGalInlineKeyboardAb(chat_id));
-            } else if (message_text.equals("В - Ж")) {
+            } else if (message_text.equals(V_J_TG.getAbcGroup())) {
                 execute(TretGalInlineKeyboardVj.tretGalInlineKeyboardVj(chat_id));
-            } else if (message_text.equals("З - К")) {
+            } else if (message_text.equals(Z_K_TG.getAbcGroup())) {
                 execute(TretGalInlineKeyboardZk.tretGalInlineKeyboardZk(chat_id));
-            } else if (message_text.equals("Л - Н")) {
+            } else if (message_text.equals(L_N_TG.getAbcGroup())) {
                 execute(TretGalInlineKeyboardLn.tretGalInlineKeyboardLn(chat_id));
-            } else if (message_text.equals("О - Р")) {
+            } else if (message_text.equals(O_R_TG.getAbcGroup())) {
                 execute(TretGalInlineKeyboardOr.tretGalInlineKeyboardOr(chat_id));
-            } else if (message_text.equals("С - У")) {
+            } else if (message_text.equals(S_U_TG.getAbcGroup())) {
                 execute(TretGalInlineKeyboardSu.tretGalInlineKeyboardSu(chat_id));
-            } else if (message_text.equals("Ф - Я")) {
+            } else if (message_text.equals(F_Y_TG.getAbcGroup())) {
                 execute(TretGalInlineKeyboardFy.tretGalInlineKeyboardFy(chat_id));
 
             }
@@ -69,7 +69,7 @@ public class TretGalSelectionHandler extends TelegramLongPollingBot {
                 execute(Sender.sendPhoto(chat_id, ROOT + "Бакст Лев Нос в Гостином дворе.jpg", "Бакст, Нос в Гостином дворе"));
 
             } else if (call_data.equals(BASYROV.toString())) {
-                execute(Sender.sendPhoto(chat_id, ROOT + "Басыров Гариф Лист № 9 Из серии Миниатюры. Архаика.jpg", "Басыро, Лист № 9 Из серии Миниатюры. Архаика"));
+                execute(Sender.sendPhoto(chat_id, ROOT + "Басыров Гариф Лист № 9 Из серии Миниатюры. Архаика.jpg", "Басыров, Лист № 9 Из серии Миниатюры. Архаика"));
 
             } else if (call_data.equals(BESIN.toString())) {
                 execute(Sender.sendPhoto(chat_id, ROOT + "Безин Иван Двор на Чкаловской. Зимнее солнце.png", "Безин, Двор на Чкаловской. Зимнее солнце"));
@@ -568,6 +568,9 @@ public class TretGalSelectionHandler extends TelegramLongPollingBot {
             } else if (call_data.equals(YAROSHENKO.toString())) {
                 execute(Sender.sendPhoto(chat_id, ROOT + "Ярошенко Николай Портрет актрисы Пелагеи Антиповны Стрепетовой.png", "Ярошенко, Портрет актрисы Пелагеи Антиповны Стрепетовой"));
                 execute(Sender.sendPhoto(chat_id, ROOT + "Ярошенко Николай Портрет неизвестной.png", "Ярошенко, Портрет неизвестной"));
+
+            } else if (call_data.equals(WEB_TG.toString())) {
+                execute(Sender.sendMessage(chat_id, ""));
 
             }
 
