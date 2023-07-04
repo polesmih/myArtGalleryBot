@@ -34,7 +34,7 @@ Telegram Bot API
 4. Inline-клавиатура и с перечнем художников  
 ![IMG_5253](https://github.com/polesmih/myArtGalleryBot/assets/77875474/e63974b8-c668-4825-86a7-133dc8d3dc92)  
 
-5. Загрузка картины выбраного художника
+5. Загрузка картины выбраного художника  
 ![IMG_5255](https://github.com/polesmih/myArtGalleryBot/assets/77875474/289e28a2-80fe-41d8-8541-327293b387da)  
 
  
