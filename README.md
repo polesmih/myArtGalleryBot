@@ -2,6 +2,7 @@
 Telegram-бот для  просмотра некоторых работ известных художников.   
 
 Бот в Telegram: [@GalleryTrip_bot](https://t.me/GalleryTrip_bot)  
+[Статья на Хабр](https://habr.com/ru/articles/746370/)  
 
 ## Лицензия  
 Этот проект лицензирован по лицензии MIT.  
