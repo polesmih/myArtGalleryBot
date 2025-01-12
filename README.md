@@ -1,7 +1,7 @@
 # myArtGalleryBot (java)  
 Telegram-бот для  просмотра некоторых работ известных художников.   
 
-Бот в Telegram: [@GalleryTrip_bot](https://t.me/GalleryTrip_bot)  
+Бот в Telegram остановлен за невостребованностью и в связи с разработкой [бота "Викторина"](https://github.com/polesmih/quizBot).  
 [Статья на Хабр](https://habr.com/ru/articles/746370/)  
 
 ## Лицензия  
